@@ -3,7 +3,7 @@ from flask_mail import Mail, Message
 import os
 from dotenv import load_dotenv
 load_dotenv()
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 app.config['SECRET_KEY'] = os.getenv('secret_key')
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -51,7 +51,7 @@ Mensagem:
 
 @app.route('/download/<filename>')
 def download_file(filename):
-    directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cv')
+    directory = os.path.join(os.path.dirname(__file__), 'cv')
     return send_from_directory(directory, filename, as_attachment=True)
 
 if __name__ == '__main__':
