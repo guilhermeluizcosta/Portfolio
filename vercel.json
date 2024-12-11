@@ -4,6 +4,10 @@
     { "src": "app.py", "use": "@vercel/python" }
   ],
   "routes": [
+    { "src": "/download/(.*)", "dest": "app.py" },
     { "src": "/(.*)", "dest": "app.py" }
+  ],
+  "includeFiles": [
+    "cv/*"
   ]
 }
