@@ -3,7 +3,7 @@ from flask_mail import Mail, Message
 import os
 from dotenv import load_dotenv
 load_dotenv()
-app = Flask(__name__, static_folder='static')
+app = Flask(__name__)
 
 app.config['SECRET_KEY'] = os.getenv('secret_key')
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
