@@ -51,7 +51,7 @@ Mensagem:
 
 @app.route('/download/<filename>')
 def download_file(filename):
-    directory = os.path.join(os.getcwd(), 'cv')
+    directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cv')
     return send_from_directory(directory, filename, as_attachment=True)
 
 if __name__ == '__main__':
