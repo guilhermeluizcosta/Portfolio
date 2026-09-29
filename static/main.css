@@ -91,7 +91,7 @@ section {
     /*border:solid 1px var(--color-02); /* test */
 }
 
-span {
+span.text-highlight {
     color: var(--main-color);
 }
 
