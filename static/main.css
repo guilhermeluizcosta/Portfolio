@@ -1,4 +1,3 @@
-/* Imports the Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -51,7 +50,6 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    /*border:solid 1px var(--color-02); /* test */
 }
 
 .logo {
@@ -77,7 +75,6 @@ header{
     color: var(--text-color);
     padding: 0.5rem 1rem;
     transition: 0.4s;
-    /* border:solid 1px var(--color-02); /* test */
 
 }
 
@@ -88,10 +85,9 @@ header{
 section {
     min-height: 100vh;
     padding: 6rem 6rem 2rem;
-    /*border:solid 1px var(--color-02); /* test */
 }
 
-span {
+span.text-highlight {
     color: var(--main-color);
 }
 
@@ -134,7 +130,6 @@ span {
 .about-content h1 {
     font-weight: 700;
     line-height: 1.3;
-    /*font-size: 2.7rem; /* test */
 }
 
 .home-content h3,
@@ -514,9 +509,6 @@ footer {
 /* Large (lg): Notebook */
 @media (min-width: 992px) {
 
-   /*.home-img, .about-img {
-         max-width: 35%;
-    } */
    .services-container {
      flex-direction: row;
      gap: 1.2rem;
