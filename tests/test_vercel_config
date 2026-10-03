@@ -1,0 +1,9 @@
+import json
+from pathlib import Path
+
+VERCEL_JSON = Path(__file__).resolve().parent.parent / "vercel.json"
+
+
+def test_vercel_json_sets_app_max_duration():
+    config = json.loads(VERCEL_JSON.read_text(encoding="utf-8"))
+    assert config["functions"]["app.py"]["maxDuration"] == 120
