@@ -1,11 +1,11 @@
 /* === Turns the menu hamburguer into a X === */
 
 const menuHamburguer = document.querySelector('.menu-hamburguer');
-menuHamburguer.addEventListener('click',()=> {
+menuHamburguer.addEventListener('click', () => {
     toggleMenu();
 });
 
-function toggleMenu(){
+function toggleMenu() {
     const nav = document.querySelector('.nav-responsive');
     menuHamburguer.classList.toggle('change');
     if (menuHamburguer.classList.contains('change')) {
@@ -13,4 +13,11 @@ function toggleMenu(){
     } else {
         nav.style.display = 'none';
     }
+}
+
+const langToggleMobile = document.getElementById('lang-toggle-mobile');
+if (langToggleMobile) {
+    langToggleMobile.addEventListener('click', () => {
+        document.getElementById('lang-toggle')?.click();
+    });
 }

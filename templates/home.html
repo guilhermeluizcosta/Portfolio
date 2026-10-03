@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio Website</title>
-    <!-- boxicons -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">Guilherme Luiz | Software Developer</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- custom css -->
     <link rel="stylesheet" href="{{ url_for('static',filename= 'main.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static',filename= 'chat.css') }}">
 </head>
 <body>
   <header>
-    <a href="a" class="logo">Portfolio</a>
+    <a href="#home" class="logo">Portfolio</a>
     <div class="nav">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <button type="button" id="lang-toggle" data-i18n="nav.lang_toggle" aria-label="Switch language">PT</button>
     </div>
 
     <div class="nav-responsive">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <button type="button" id="lang-toggle-mobile" data-i18n="nav.lang_toggle" aria-label="Switch language">PT</button>
     </div>
-
 
       <div class="menu-hamburguer">
           <div class="bar1"></div>
@@ -35,25 +35,24 @@
           <div class="bar3"></div>
       </div>
   </header>
-<!-- home section -->
+
   <section class="home" id="home">
     <div class="home-content">
-      <h3>Hello, I'm</h3>
-      <h1>Guilherme Luiz</h1>
-      <h3>Python <spam>Programmer</spam> and <spam>Developer</spam> </h3>
-      <p>
-        Programmer focused on Software development, Data Science, Machine Learning and Web Development in Python.
-        I have knowledge of Python, Java and SQL languages.
-        Currently graduating in Information Systems and looking for an internship.
+      <h3 data-i18n="home.greeting">Hello, I'm</h3>
+      <h1 data-i18n="home.name">Guilherme Luiz</h1>
+      <h3><span data-i18n="home.title_prefix">Backend Developer</span> <span data-i18n="home.title_and">and</span> <span class="text-highlight" data-i18n="home.title_developer">Software Developer</span></h3>
+      <p data-i18n="home.description">
+        Software developer focused on backend development with Java, using Micronaut and Spring Boot. I also have experience
+        with Python, React, TypeScript, Kafka, SQL Server, Azure and CI/CD. Currently studying Information Systems and developing software solutions in a corporate environment.
       </p>
       <div class="social-media">
-        <a href="https://www.linkedin.com/in/guilherme-luiz-379704193/"><i class='bx bxl-linkedin'></i></a>
-        <a href="https://www.instagram.com/guilhermelic/"><i class='bx bxl-instagram'></i></a>
-        <a href="https://github.com/guilhermeluizcosta/"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/guilherme-luiz-379704193/" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://www.instagram.com/guilhermelic/" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+        <a href="https://github.com/guilhermeluizcosta/" aria-label="GitHub"><i class='bx bxl-github'></i></a>
       </div>
 
       <div>
-        <a href="https://drive.usercontent.google.com/u/0/uc?id=1jruxNL9rgiWhO0D-MZwIXkyexrf4x7VM&export=download" class="btn">Download CV</a>
+        <a href="https://drive.usercontent.google.com/u/0/uc?id=1jruxNL9rgiWhO0D-MZwIXkyexrf4x7VM&export=download" class="btn" data-i18n="home.download_cv">Download CV</a>
       </div>
 
     </div>
@@ -61,90 +60,85 @@
       <img src="{{ url_for('static',filename= 'img/profile.png') }}" alt="Profile picture">
     </div>
   </section>
-<!-- /home section -->
-<!-- service section -->
 
   <section class="services" id="services">
-    <h2>My <span>Services</span></h2>
+    <h2><span data-i18n="services.title_prefix">My</span> <span class="text-highlight" data-i18n="services.title_highlight">Services</span></h2>
     <div class="services-container">
         <div class="services-box">
           <i class='bx bx-code-alt'></i>
-          <h3> Python Web Development</h3>
-          <p>
-              Custom websites developed using Python with Flask and Django, integrated with CSS and HTML.
+          <h3 data-i18n="services.web.title">Backend Development</h3>
+          <p data-i18n="services.web.description">
+              Backend development using Java with Micronaut and Spring Boot, as well as Python with Flask and Django.
           </p>
-
         </div>
         </div>
       <div class="services-container">
         <div class="services-box">
-          <i class='bx bx-data' ></i>
-          <h3>Data Science</h3>
-          <p>
-           Science and Data Analysis projects using Machine Learning in Python for predictions and decision making.
+          <i class='bx bx-layer' ></i>
+          <h3 data-i18n="services.data.title">Full Stack Development</h3>
+          <p data-i18n="services.data.description">
+           Web application development using Java or Python on the backend and React with TypeScript on the frontend
           </p>
         </div>
     </div>
 
     <div class="services-container">
         <div class="services-box">
-          <i class='bx bxl-python'></i>
-          <h3>Web Automation</h3>
-          <p>
-              Web automation using APIs and Python extensions such as Selenium to automate processes and searches.
+          <i class='bx bx-git-branch'></i>
+          <h3 data-i18n="services.automation.title">Web Automation</h3>
+          <p data-i18n="services.automation.description">
+              Integration between applications and services using APIs, Kafka, AWS, Azure and CI/CD practices.
           </p>
         </div>
     </div>
   </section>
-<!-- /service section -->
-<!-- portfolio section -->
+
   <section class="portfolio" id="portfolio">
-    <h2>Latest <span>Projects</span></h2>
+    <h2><span data-i18n="portfolio.title_prefix">Latest</span> <span class="text-highlight" data-i18n="portfolio.title_highlight">Projects</span></h2>
     <div class="portfolio-container">
 
       <div class="portfolio-box">
             <img src="{{ url_for('static',filename= 'img/1.png') }}" alt="">
             <div class="portfolio-layer">
-                <h4>Forum Comunidade</h4>
-                <p>Discussion forum with account creation, profile editing, post creation, post editing and deletion features, home with created posts.</p>
-                <a href="https://github.com/guilhermeluizcosta/SiteComunidade"><i class='bx bx-link-external'></i></a>
+                <h4 data-i18n="portfolio.forum.title">Forum Comunidade</h4>
+                <p data-i18n="portfolio.forum.description">Discussion forum with account creation, profile editing, post creation, post editing and deletion features, home with created posts.</p>
+                <a href="https://github.com/guilhermeluizcosta/SiteComunidade" aria-label="Forum Comunidade project"><i class='bx bx-link-external'></i></a>
             </div>
             </div>
 
       <div class="portfolio-box">
             <img src="{{ url_for('static',filename= 'img/2.png') }}" alt="">
             <div class="portfolio-layer">
-                <h4>Fake Pinterest</h4>
-                <p>
+                <h4 data-i18n="portfolio.pinterest.title">Fake Pinterest</h4>
+                <p data-i18n="portfolio.pinterest.description">
                 Replica of the Pinterest Website made in Flask, has all the features of the Original.</p>
-                <a href="https://github.com/guilhermeluizcosta/fakepinterest"><i class='bx bx-link-external'></i></a>
+                <a href="https://github.com/guilhermeluizcosta/fakepinterest" aria-label="Fake Pinterest project"><i class='bx bx-link-external'></i></a>
             </div>
           </div>
 
       <div class="portfolio-box">
             <img src="{{ url_for('static',filename= 'img/3.jpg') }}" alt="">
             <div class="portfolio-layer">
-                <h4>Data Science - Airbnb Rio</h4>
-                <p>Prediction Model for Airbnb rentals in Rio do Janeiro</p>
-                <a href="https://github.com/guilhermeluizcosta/Projeto-CienciaDeDados"><i class='bx bx-link-external'></i></a>
+                <h4 data-i18n="portfolio.airbnb.title">Data Science - Airbnb Rio</h4>
+                <p data-i18n="portfolio.airbnb.description">Prediction Model for Airbnb rentals in Rio do Janeiro</p>
+                <a href="https://github.com/guilhermeluizcosta/Projeto-CienciaDeDados" aria-label="Airbnb Rio project"><i class='bx bx-link-external'></i></a>
             </div>
           </div>
 
         <div class="portfolio-box">
             <img src="{{ url_for('static',filename= 'img/4.jpg') }}" alt="">
             <div class="portfolio-layer">
-                <h4>Web Automation</h4>
-                <p>Automation of price searches for products on the Google Shopping and Buscapé websites using APIs and Selenium.</p>
-                <a href="https://github.com/guilhermeluizcosta/Projeto-AutomacaoWeb"><i class='bx bx-link-external'></i></a>
+                <h4 data-i18n="portfolio.automation.title">Web Automation</h4>
+                <p data-i18n="portfolio.automation.description">Automation of price searches for products on the Google Shopping and Buscapé websites using APIs and Selenium.</p>
+                <a href="https://github.com/guilhermeluizcosta/Projeto-AutomacaoWeb" aria-label="Web Automation project"><i class='bx bx-link-external'></i></a>
             </div>
       </div>
 
     </div>
   </section>
-<!-- /portfolio section -->
-<!-- contact section -->
+
   <section class="contact" id="contact">
-      <h2>Contact <span>Me!</span></h2>
+      <h2><span data-i18n="contact.title_prefix">Contact</span> <span class="text-highlight" data-i18n="contact.title_highlight">Me!</span></h2>
 
       <form method="POST">
        {% with messages = get_flashed_messages(with_categories=true) %}
@@ -155,38 +149,66 @@
         {% endif %}
         {% endwith %}
           <div class="input-box">
-              <input type="text" name="nome" placeholder="Full Name" required>
-              <input type="email" name="email" placeholder="E-mail" required>
+              <input type="text" name="nome" data-i18n-placeholder="contact.name" placeholder="Full Name" required>
+              <input type="email" name="email" data-i18n-placeholder="contact.email" placeholder="E-mail" required>
           </div>
 
           <div class="input-box">
-              <input type="text" name="telefone" placeholder="Phone Number" required>
-              <input type="text" name="assunto" placeholder="Subject" required>
+              <input type="text" name="telefone" data-i18n-placeholder="contact.phone" placeholder="Phone Number" required>
+              <input type="text" name="assunto" data-i18n-placeholder="contact.subject" placeholder="Subject" required>
           </div>
 
-          <textarea name="mensagem" cols="30" rows="8" placeholder="Message" required></textarea>
-          <button class="btn" type="submit">Send</button>
+          <textarea name="mensagem" cols="30" rows="8" data-i18n-placeholder="contact.message" placeholder="Message" required></textarea>
+          <button class="btn" type="submit" data-i18n="contact.send">Send</button>
       </form>
   </section>
-<!-- /contact section -->
-<!-- about section -->
+
   <section class="about" id="about">
       <div class="about-img">
           <img src="{{ url_for('static',filename= 'img/profile.png') }}" alt="About me">
       </div>
       <div class="about-content">
-          <h3>About Me</h3>
-          <h1>Python and Java <spam>Developer</spam></h1>
-          <p>My name is Guilherme Luiz, I am currently 24 years old and I am looking for my first job in the programming field. I have focused on acquiring knowledge in Python and other languages, as well as other external knowledge such as technical support to become a versatile developer and prepared for challenges. In addition to programming, I have experience in teamwork with sales work and I have advanced fluency in English.</p>
+          <h3 data-i18n="about.title">About Me</h3>
+          <h1><span data-i18n="about.subtitle_prefix">Python and Java</span> <span class="text-highlight" data-i18n="about.subtitle_highlight">Developer</span></h1>
+          <p data-i18n="about.description">My name is Guilherme Luiz, I am currently 26 years old and studying Information Systems. I work as a Software Development Intern, with my main focus on backend development using Micronaut and Spring Boot. I also have experience with Python, React and TypeScript, as well as Kafka, AWS, SQL Server, Azure and CI/CD. In my current role, I participate in technical decisions, code reviews and the definition of software solutions, while continuing to develop my skills as a full stack developer.</p>
       </div>
 
   </section>
-<!-- /about section -->
-<footer>
-          <p>Copyright &copy; 2024 by &lt;Guilherme Luiz&gt;, based on the model of Marnei Cardoso</p>
-      </footer>
-</body>
-<script src="{{ url_for('static',filename= 'script.js') }}">
 
+<footer>
+          <p data-i18n="footer.copyright">Copyright &copy; 2024 by &lt;Guilherme Luiz&gt;, based on the model of Marnei Cardoso</p>
+      </footer>
+
+<!-- Chat assistant -->
+<button type="button" class="chat-fab" id="chat-fab" data-i18n="chat.fab_label" data-i18n-attr="aria-label" aria-label="Open chat assistant">
+    <i class='bx bx-message-dots' aria-hidden="true"></i>
+</button>
+
+<div class="chat-overlay" id="chat-overlay" aria-hidden="true"></div>
+
+<div class="chat-panel" id="chat-panel" role="dialog" aria-modal="true" aria-labelledby="chat-title" aria-hidden="true">
+    <div class="chat-panel__header">
+        <div>
+            <div class="chat-panel__title" id="chat-title" data-i18n="chat.title">Ask me anything</div>
+            <div class="chat-panel__quota" id="chat-quota" aria-live="polite"></div>
+            <div class="chat-panel__cold-start" data-i18n="chat.cold_start_hint"></div>
+        </div>
+        <button type="button" class="chat-panel__close" id="chat-close" data-i18n="chat.close" data-i18n-attr="aria-label" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="chat-panel__messages" id="chat-messages" role="list" aria-live="polite"></div>
+    <div class="chat-panel__footer">
+        <div class="chat-panel__input-row">
+            <textarea class="chat-panel__input" id="chat-input" rows="1" data-i18n-placeholder="chat.placeholder" placeholder="Type your question..." maxlength="2000"></textarea>
+            <button type="button" class="chat-panel__send" id="chat-send" data-i18n="chat.send">Send</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.__CHAT_CONFIG__ = {{ chat_config | tojson }};
 </script>
+<script src="{{ url_for('static',filename= 'i18n.js') }}"></script>
+<script src="{{ url_for('static',filename= 'script.js') }}"></script>
+<script src="{{ url_for('static',filename= 'chat.js') }}"></script>
+</body>
 </html>
